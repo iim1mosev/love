@@ -1,110 +1,145 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اختاري ❤️</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body {
-      min-height: 100vh;
-      text-align: center;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #050505 0%, #151515 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    <title>اختاري ❤️</title>
 
-    .container {
-      background: rgba(15, 15, 15, 0.6);
-      backdrop-filter: blur(10px);
-      border-radius: 60px;
-      padding: 50px 40px;
-      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(120, 120, 120, 0.2);
-    }
+    <link rel="stylesheet" href="style.css">
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 50px;
-      color: #999;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-      font-weight: bold;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    button {
-      display: block;
-      margin: 25px auto;
-      padding: 18px 45px;
-      font-size: 1.5rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 260px;
-      font-family: inherit;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    }
+        body {
+            min-height: 100vh;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #050505 0%, #151515 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .old {
-      background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
-      color: #b5b5b5;
-    }
+        .container {
+            background: rgba(15, 15, 15, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            padding: 50px 40px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(120, 120, 120, 0.2);
+        }
 
-    .new {
-      background: linear-gradient(135deg, #2a2a2a, #0c0c0c);
-      color: #b5b5b5;
-    }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #999;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            font-weight: bold;
+        }
 
-    button:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
-    }
+        button {
+            display: block;
+            margin: 25px auto;
+            padding: 18px 45px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 290px;
+            max-width: 100%;
+            font-family: inherit;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
 
-    button:active {
-      transform: translateY(2px);
-    }
+        .old {
+            background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+            color: #b5b5b5;
+        }
 
-    @media (max-width: 500px) {
-      .container {
-        padding: 35px 25px;
-        margin: 20px;
-      }
-      h1 {
-        font-size: 1.8rem;
-      }
-      button {
-        width: 220px;
-        padding: 14px 30px;
-        font-size: 1.2rem;
-      }
-    }
-  </style>
+        .new {
+            background: linear-gradient(135deg, #2a2a2a, #0c0c0c);
+            color: #b5b5b5;
+        }
+
+        .photos {
+            background: linear-gradient(135deg, #383044, #17121f);
+            color: #e0c8ff;
+        }
+
+        button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .photos:hover {
+            box-shadow: 0 15px 30px rgba(120, 70, 180, 0.3);
+        }
+
+        button:active {
+            transform: translateY(2px);
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 35px 25px;
+                margin: 20px;
+                width: calc(100% - 40px);
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 35px;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px 15px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>اختاري ينور عيني 😍</h1>
-    <button class="old" onclick="goOld()">يوم 14/2 🥰</button>
-    <button class="new" onclick="goNew()">عايز نرجع زي الاول   💔</button>
-  </div>
 
-  <script>
-    function goOld() {
-      window.location.href = "old.html";
-    }
+    <div class="container">
 
-    function goNew() {
-      // غيري الرابط هنا حسب ما تبغي
-      window.location.href = "https://mosev1474.github.io/sorry-site/";
-    }
-  </script>
+        <h1>اختاري ينور عيني 😍</h1>
+
+        <button class="old" onclick="goOld()">
+            يوم 14/2 🥰
+        </button>
+
+        <button class="new" onclick="goNew()">
+            عايز نرجع زي الاول 💔
+        </button>
+
+        <button class="photos" onclick="goPhotos()">
+            الصور بتاعتنا 📸❤️
+        </button>
+
+    </div>
+
+    <script>
+        function goOld() {
+            window.location.href = "old.html";
+        }
+
+        function goNew() {
+            window.location.href = "https://mosev1474.github.io/sorry-site/";
+        }
+
+        function goPhotos() {
+            window.location.href = "https://iim1mosev.github.io/gallery/";
+        }
+    </script>
+
 </body>
 </html>
